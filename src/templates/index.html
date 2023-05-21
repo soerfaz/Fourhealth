@@ -3,40 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Apps</title>
+  <title>Fourhealth</title>
 </head>
 <body>
-<header>
-  <h1>Contact Apps</h1>
+<header class="app-bar">
+  <div class="app-bar__menu">
+    <button id="hamburgerButton">☰</button>
+  </div>
+  <div class="app-bar__brand">
+    <h1>Fourhealth</h1>
+  </div>
+  <nav id="navigationDrawer" class="app-bar__navigation">
+    <ul>
+      <li><a href="">Beranda</a></li>
+      <li><a href="">Cek Penyakit</a></li>
+    </ul>
+  </nav>
 </header>
-<main>
-  <form id="inputContactForm">
-    <h2>Input Contact</h2>
-    <label for="inputName">Name</label>
-    <input type="text" id="inputName">
-    <label for="inputNumber">Number</label>
-    <input type="tel" id="inputNumber">
-    <label for="inputType">Type</label>
-    <select id="inputType">
-      <option value="mobile">Mobile</option>
-      <option value="office">Office</option>
-      <option value="other">Other</option>
-    </select>
-    <button>Add contact</button>
-  </form>
-  <form id="showContactForm">
-    <h2>Show Contact</h2>
-    <label for="contactType">Type</label>
-    <select id="contactType">
-      <option value="all">All</option>
-      <option value="mobile">Mobile</option>
-      <option value="office">Office</option>
-      <option value="other">Other</option>
-    </select>
-    <button>Show/Refresh contact</button>
-  </form>
-  <ul id="contacts">
-  </ul>
+  
+<main id="mainContent">
+  <section>
+    <div class="home-pict">
+      <img width="400px" src="./4990224.jpg" alt="" />
+    </div>
+    <div class="text">
+      <h3>Cari resiko penyakit anda dengan Fourhealth</h3>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <p>
+    Copyright &copy; 2023 - <a href="index.html" target="_blank" rel="noreferrer">Fourhealth</a>
+  </p>
+</footer>
 </body>
 </html>
