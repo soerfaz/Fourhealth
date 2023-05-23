@@ -1,31 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
-    <title>Input Symptom</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %} Input Symptomps {% endblock title %}
+{% block content %} 
     <h1>Input page</h1>
     <h2>Input Symptom</h2>
     <form action="" method="post">
         <div>
-            <h3>symptomps on skin</h3>
-            <div>
-                <label for="itching">Itching</label>
-                <input type="checkbox" name="itching" id="">
+            <h3 class="is-size-3">symptomps on skin</h3>
+            <div class="field">
+                <label class="checkbox" for="itching">
+                    Itching
+                    <input type="checkbox" name="itching" id="">
+                </label>
             </div>
-            <div>
-                <label for="sneeze">Sneeze</label>
-                <input type="checkbox" name="sneeze" id="">
+            <div class="field">
+                <label class="sneeze" for="itching">
+                    Sneeze
+                    <input type="checkbox" name="sneeze" id="">
+                </label>
             </div>
-            <div>
-                <label for="cough">Cough</label>
-                <input type="checkbox" name="cough" id="">
+            <div class="field">
+                <label for="cough">
+                    Cough
+                    <input type="checkbox" name="cough" id="">
+                </label>
             </div>
         </div>
     </form>
-</body>
-</html>
+{% endblock content %}
