@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "462251c4fe3e201c5c1b151fc8396584c28e9e50c56f6ad61ab298909355b857"
+            "sha256": "03024aee7f6035a972a59c704bc024de773d3606137f11fd562093cb52aa2e01"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +39,14 @@
             ],
             "index": "pypi",
             "version": "==2.3.2"
+        },
+        "flask-wtf": {
+            "hashes": [
+                "sha256:41c4244e9ae626d63bed42ae4785b90667b885b1535d5a4095e1f63060d12aa9",
+                "sha256:7887d6f1ebb3e17bf648647422f0944c9a469d0fcf63e3b66fb9a83037e38b2c"
+            ],
+            "index": "pypi",
+            "version": "==1.1.1"
         },
         "importlib-metadata": {
             "hashes": [
@@ -293,6 +301,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==2.3.4"
+        },
+        "wtforms": {
+            "hashes": [
+                "sha256:6b351bbb12dd58af57ffef05bc78425d08d1914e0fd68ee14143b7ade023c5bc",
+                "sha256:837f2f0e0ca79481b92884962b914eba4e72b7a2daaf1f939c890ed0124b834b"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==3.0.1"
         },
         "zipp": {
             "hashes": [
