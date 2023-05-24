@@ -14,5 +14,9 @@ def result():
 def _input():
     return render_template("input.html",_input=True)
 
+@app.route("/about")
+def about():
+    return render_template("about.html",about=True)
+
 
 app.run(debug=True,port=8000)
