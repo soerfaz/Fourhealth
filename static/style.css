@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
+
+body {
+    font-family: 'Rufina', serif;
+    background-color:rgb(255, 249, 240);
+}
+
+
+/* Navbaar */
+.navbar-brand{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.nav-link{
+    font-size: 18px;
+}
+
+.nav-link.active{
+    font-weight: 700;
+}
+
+.button-masuk{
+    width: 110px;
+    height: 35px;
+    background-color: #fff;
+    color: #0B8FAC;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 7px;
+}
+
+.lead {
+    text-align: justify;
+}
+
+.text_section_dua p{
+    text-align: justify;
+}
+
+/*** Team ***/
+.team-item {
+    position: relative;
+    padding: 4rem 0;
+}
+
+.team-item img {
+    position: relative;
+    z-index: 2;
+}
+
+.team-item .team-text {
+    text-align: center;
+}
+
+.team-item .team-text p{
+    font-size: 12px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #0B8FAC;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
