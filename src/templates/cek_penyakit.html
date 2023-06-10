@@ -9,7 +9,12 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
 
     <title>Fourhealth</title>
   </head>
@@ -30,78 +35,93 @@
                 <a class="nav-link" aria-current="page" href="/">Beranda</a>
               </li>
               <li class="nav-item mx-3">
-                <a class="nav-link " href="{{url_for('cek_penyakit')}}">Cek Penyakit</a>
+                <a class="nav-link active" href="{{url_for('cek_penyakit')}}">Cek Penyakit</a>
               </li>
               <li class="nav-item mx-3">
-                <a class="nav-link active" href="{{url_for('about')}}">About-Us</a>
+                <a class="nav-link " href="{{url_for('about')}}">About-Us</a>
               </li>
             </ul>
            
           </div>
         </div>
       </nav>
-    
-     <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="{{url_for('static', filename='img/faviconfourhealth.png')}}" alt="" width="100" >
-    <h1 class="display-5 fw-bold text-body-emphasis">Fourhealth</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4 text-center">Fourhealth merupakan sebuah project tugas ahkir pada SIB x Dicoding batch 4 dengan tujuan untuk mensejaterahkan masyarakat dalam hal kesehatan. Project ini dikerjakan oleh Team C23-M4035 yang terdiri dari 4 orang mahasiswa</p>
+
+<main>
+
+  <div class="container" id="content">
+
+    <div class="py-3 text-center mt-5">
+      <img class="d-block mx-auto mb-4" src="{{url_for('static', filename='img/faviconfourhealth.png')}}" alt="" width="100" height="100">
+      <h2>Cek Kesehatan</h2>
     </div>
-  </div>
+    
+    <article id="sejarah" class="card">
+      <h3 class="text-center">Masukkan Gejala dan Temukan Penyakit nya</h3>
+      <div class="row">
+      <form class="form col-lg-6" action="#" id="form">
 
 
-      
-    <!-- Team Start -->
-    <div class="container-xxl py-1 mt-5">
-      <div class="container">
-          <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-              <p class="d-inline-block border rounded fw-semi-bold py-1 px-3" style="color: #146C94;">Our Team</p>
-              <h1 class="display-4 mb-0">Team C23-M4035</h1>
+        <div class="form-group form-title">
+          <label for="Gejala 1" class="form-label">Gejala 1</label>
+              <select class="form-select" id="Gejala 1" required>
+                <option value="">Choose...</option>
+                <option>Batuk</option>
+              </select>
+              <div class="invalid-feedback">
+                Inputkan Gejala Yang Valid.
+              </div>
+        </div>
+
+        <div class="form-group form-title">
+          <label for="Gejala 2" class="form-label">Gejala 2</label>
+          <select class="form-select" id="Gejala 2" required>
+            <option value="">Choose...</option>
+            <option>Batuk</option>
+          </select>
+          <div class="invalid-feedback">
+            Inputkan Gejala Yang Valid.
           </div>
-          <div class="row g-4">
-              <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="team-item">
-                      <img class="img-fluid rounded mb-3" src="../../static/img/team-1.jpg" alt="">
-                      <div class="team-text">
-                          <h4 class="mb-0">Bayyu Putra Wirawan</h4>
-                          <p>Universitas Gunadarma</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="team-item">
-                      <img class="img-fluid rounded mb-3" src="../../static/img/George-Team.jpeg" alt="">
-                      <div class="team-text">
-                        <h4 class="mb-0">George Isaiah Abiyoso</h4>
-                        <p>Institut Teknologi Telkom Purwokerto</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="team-item">
-                      <img class="img-fluid rounded mb-3" src="../../static/img/Gesen-Team.jpg" alt="">
-                      <div class="team-text">
-                          <h4 class="mb-0">Gesen Abiyoga Soerfaz</h4>
-                          <p>Universitas Gunadarma</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
-                  <div class="team-item">
-                      <img class="img-fluid rounded mb-3" src="../../static/img/team-1.jpg" alt="">
-                      <div class="team-text">
-                          <h4 class="mb-0">Salman Al Farizi</h4>
-                          <p>Sekolah Tinggi Manajemen Informatika dan Komputer Jakarta STI&K</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Team End -->
+        </div>
 
+      </form>
+
+      <form class="form col-lg-6" action="#" id="form">
+
+        <div class="form-group form-title">
+          <label for="Gejala 3" class="form-label">Gejala 3</label>
+              <select class="form-select" id="Gejala 3" required>
+                <option value="">Choose...</option>
+                <option>Batuk</option>
+              </select>
+              <div class="invalid-feedback">
+                Inputkan Gejala Yang Valid.
+              </div>
+        </div>
+
+        <div class="form-group form-title">
+          <label for="Gejala 4" class="form-label">Gejala 4</label>
+              <select class="form-select" id="Gejala 4" required>
+                <option value="">Choose...</option>
+                <option>Batuk</option>
+              </select>
+              <div class="invalid-feedback">
+                Inputkan Gejala Yang Valid.
+              </div>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- <input id="gejalaSubmit" type="submit" value="Cek Penyakit" name="Submit" class="btn-submit w-100"> -->
+    <a href="detail.html"><button class="btn-submit w-100">cek</button></a>
+
+    </article>
+  </div>
+<main>
+
+    
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer mt-5">
 
     <div class="container">
       <div class="row gy-3">

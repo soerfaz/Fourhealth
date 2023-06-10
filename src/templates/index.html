@@ -15,7 +15,7 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark py-3"  style="background-color: #0B8FAC;">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3"  style="background-color: #146C94;">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="{{url_for('static', filename='img/faviconfourhealth.png')}}" alt="" width="30" class="d-inline-block align-text-top me-2">
@@ -30,7 +30,7 @@
                 <a class="nav-link active" aria-current="page" href="/">Beranda</a>
               </li>
               <li class="nav-item mx-3">
-                <a class="nav-link" href="{{url_for('_input')}}">Cek Penyakit</a>
+                <a class="nav-link" href="{{url_for('cek_penyakit')}}">Cek Penyakit</a>
               </li>
               <li class="nav-item mx-3">
                 <a class="nav-link" href="{{url_for('about')}}">About-Us</a>
@@ -55,7 +55,7 @@
       </div>
 
       <!-- Content section 2-->
-      <section class="py-5" style="background-color: #0B8FAC;">
+      <section class="py-5" style="background-color: #146C94;">
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
@@ -78,7 +78,7 @@
     <div class="container-xxl py-1 mt-5">
       <div class="container">
           <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-              <p class="d-inline-block border rounded fw-semi-bold py-1 px-3" style="color: #0B8FAC;">Our Team</p>
+              <p class="d-inline-block border rounded fw-semi-bold py-1 px-3" style="color: #146C94;">Our Team</p>
               <h1 class="display-4 mb-0">Team C23-M4035</h1>
           </div>
           <div class="row g-4">
@@ -123,13 +123,45 @@
   </div>
   <!-- Team End -->
 
-  <!-- Footer -->
-  <footer>
-    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-      <img src="../../static/img/faviconfourhealth.png" width="30" alt="">
-    </a>
-    <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 - Fourhealth</span>
-  </footer>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-6 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Address</h4>
+            <p>
+              No. 10 Ruko IKN <br>
+              Nusantara - Indonesia<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Reservations</h4>
+            <p>
+              <strong>Phone:</strong> +62 8589 5548 8955<br>
+              <strong>Email:</strong> Fourhealth@gmail.com<br>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Fourhealth</span></strong>. All Rights Reserved
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
 
 
     <!-- Optional JavaScript; choose one of the two! -->
