@@ -10,9 +10,13 @@ def index():
 def result():
     return render_template("result.html",result=True)
 
-@app.route("/input",methods=["GET","POST"])
-def _input():
-    return render_template("input.html",_input=True)
+@app.route("/cek_penyakit",methods=["GET","POST"])
+def cek_penyakit():
+    return render_template("cek_penyakit.html",_input=True)
+
+@app.route("/detail")
+def detail():
+    return render_template("detail.html",about=True)
 
 @app.route("/about")
 def about():
