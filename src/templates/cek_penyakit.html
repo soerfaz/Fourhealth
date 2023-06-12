@@ -8,6 +8,10 @@
 
   <link rel="icon" href="{{url_for('static', filename='img/faviconfourhealth.png')}}" type="image/x-icon">
 
+  <script src="{{ url_for('static', filename='js/components/cek/app-bar.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/components/cek/cara-isi.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/components/foot-bar.js') }}"></script>
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -16,41 +20,14 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="{{url_for('static', filename='index.js')}}"></script>
+  <script src="{{url_for('static', filename='js/index.js')}}"></script>
 
 
   <title>Fourhealth</title>
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark py-3" style="background-color: #146C94;">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="{{url_for('static', filename='img/faviconfourhealth.png')}}" alt="" width="30"
-          class="d-inline-block align-text-top me-2">
-        Fourhealth
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item mx-3">
-            <a class="nav-link" aria-current="page" href="/">Beranda</a>
-          </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link active" href="{{url_for('cek_penyakit')}}">Cek Penyakit</a>
-          </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link " href="{{url_for('about')}}">About-Us</a>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </nav>
+  <app-bar></app-bar>
 
   <main>
 
@@ -62,30 +39,9 @@
         <h2>Cek Kesehatan</h2>
       </div>
 
-      <article id="cara-isi" class="card">
-        <h3 class="text-center">Cara Pengisian Gejala</h3>
-        <ul class="list-group">
-          <li class="list-group-item">1. Buka halaman input gejala penyakit.</li>
-          <li class="list-group-item">2. Pada form, Anda akan melihat input box dengan label "Masukkan Gejala".</li>
-          <li class="list-group-item">3. Klik pada input box untuk membuka pilihan gejala penyakit.</li>
-          <li class="list-group-item">4. Anda dapat memilih satu atau lebih gejala penyakit dengan cara:
-            <ul>
-              <li>Klik pada gejala yang ingin Anda pilih.</li>
-              <li>Jika ingin memilih lebih dari satu gejala, lakukan hal yang sama seperti cara pertama otomatis akan
-                menambahkan gejala.</li>
-              <li>Gejala yang sudah dipilih akan ditampilkan pada input box.</li>
-            </ul>
-          </li>
-          <li class="list-group-item">5. Jika ingin mengubah atau menghapus pilihan gejala, Anda dapat membuka input box
-            lagi dan mengklik atau mengklik ulang gejala yang ingin diubah atau dihapus.</li>
-          <li class="list-group-item">6. Setelah selesai mengisi form atau halaman lainnya, klik tombol "Cek" atau
-            untuk mengirimkan data yang Anda isi.</li>
-        </ul>
-        <h6 class="text-justify mt-2 text-danger">*Pastikan untuk mengikuti petunjuk dan instruksi yang diberikan pada
-          halaman input gejala penyakit yang sebenarnya.</h4>
-      </article>
+      <cara-isi></cara-isi>
 
-      <article id="sejarah" class="card">
+      <article id="sejarah" class="card mb-5 mt-1">
         <h3 class="text-center">Masukkan Gejala dan Temukan Penyakitnya</h3>
         <div>
           <form class="form col-lg-12" action="#" id="form">
@@ -110,48 +66,9 @@
 
 
     </div>
-    <main>
-
 
       <!-- ======= Footer ======= -->
-      <footer id="footer" class="footer mt-5">
-
-        <div class="container">
-          <div class="row gy-3">
-            <div class="col-lg-6 col-md-6 d-flex">
-              <i class="bi bi-geo-alt icon"></i>
-              <div>
-                <h4>Address</h4>
-                <p>
-                  No. 10 Ruko IKN <br>
-                  Nusantara - Indonesia<br>
-                </p>
-              </div>
-
-            </div>
-
-            <div class="col-lg-6 col-md-6 footer-links d-flex">
-              <div>
-                <h4>Hubungi Kami</h4>
-                <div class="d-flex flex-column lh-lg">
-                  <a class="text-decoration-none text-white-50" href="mailto:">Bayyu Putra Wirawan</a>
-                  <a class="text-decoration-none text-white-50" href="mailto:jostampan123@gmail.com">George Isaiah Abiyoso</a>
-                  <a class="text-decoration-none text-white-50" href="mailto:Soerfaz@gmail.com">Gesen Abiyoga Soerfaz</a>
-                  <a class="text-decoration-none text-white-50" href="mailto:f001xb001@dicoding.org">Salman Al Farizi</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="copyright">
-            &copy; Copyright <strong><span>Fourhealth</span></strong>. All Rights Reserved
-          </div>
-        </div>
-
-      </footer><!-- End Footer -->
+      <foot-bar></foot-bar>
       <!-- End Footer -->
 
 
