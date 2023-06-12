@@ -104,6 +104,12 @@ body {
     margin: auto 0;
   }
   
+  .select2 {
+    width: 100% !important;
+  }
+
+  .select2-selection { overflow: hidden; }
+.select2-selection__rendered { white-space: normal; word-break: break-all; }
 
 /*** Team ***/
 .team-item {
