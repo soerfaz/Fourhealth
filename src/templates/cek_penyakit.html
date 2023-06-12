@@ -78,17 +78,17 @@
           </li>
           <li class="list-group-item">5. Jika ingin mengubah atau menghapus pilihan gejala, Anda dapat membuka input box
             lagi dan mengklik atau mengklik ulang gejala yang ingin diubah atau dihapus.</li>
-          <li class="list-group-item">6. Setelah selesai mengisi form atau halaman lainnya, klik tombol "Submit" atau
-            "Submit Form" untuk mengirimkan data yang Anda isi.</li>
+          <li class="list-group-item">6. Setelah selesai mengisi form atau halaman lainnya, klik tombol "Cek" atau
+            untuk mengirimkan data yang Anda isi.</li>
         </ul>
         <h6 class="text-justify mt-2 text-danger">*Pastikan untuk mengikuti petunjuk dan instruksi yang diberikan pada
           halaman input gejala penyakit yang sebenarnya.</h4>
       </article>
 
       <article id="sejarah" class="card">
-        <h3 class="text-center">Masukkan Gejala dan Temukan Penyakit nya</h3>
+        <h3 class="text-center">Masukkan Gejala dan Temukan Penyakitnya</h3>
         <div>
-          <form class="form col-lg-6" action="#" id="form">
+          <form class="form col-lg-12" action="#" id="form">
             <div class="form-group form-title">
               <label for="gejala1" class="form-label">Gejala Anda</label>
               <select class="form-select " multiple="multiple" id="gejala1" required>
@@ -104,7 +104,7 @@
         </div>
 
         <!-- <input id="gejalaSubmit" type="submit" value="Cek Penyakit" name="Submit" class="btn-submit w-100"> -->
-        <a href="{{url_for('detail')}}"><button class="btn-submit w-100">cek</button></a>
+        <a href="{{url_for('detail')}}" class="ms-3 me-3" ><button class="btn-submit w-100">Cek</button></a>
 
       </article>
 
