@@ -27,9 +27,17 @@
 
 <body>
   <app-bar></app-bar>
+  
+  <nav class="container mt-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a class="text-decoration-none arah-detail" href="{{url_for('index')}}">Beranda</a></li>
+      <li class="breadcrumb-item"><a class="text-decoration-none arah-detail" href="{{url_for('cek_penyakit')}}">Cek Penyakit</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Detail</li>
+    </ol>
+  </nav>
 
   <main>
-    <section class="py-5">
+    <section class="py-4">
       <div class="container px-4 px-lg-5 my-5">
         <h1 class="mb-4">Anda terkena penyakit: </h1>
         <div class="row gx-4 gx-lg-5 align-items-center">
