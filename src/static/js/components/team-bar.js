@@ -27,7 +27,7 @@ class TeamBar extends HTMLElement {
             <div class="team-item">
               <img
                 class="img-fluid rounded mb-3"
-                src="../../static/img/team-1.jpg"
+                src="../../static/img/Bayu-Team.jpg"
                 alt=""
               />
               <div class="team-text">

@@ -119,6 +119,7 @@ body {
 
 .team-item img {
     position: relative;
+    height: 250px;
     z-index: 2;
 }
 
