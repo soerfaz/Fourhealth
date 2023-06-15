@@ -14,7 +14,7 @@ class Article extends HTMLElement {
 
    
     this.innerHTML = `
-    <section class="card shadow">
+    <section class="card shadow result">
           <div class="card-body">
             <h1 class="mb-4">According by what you input, you got : </h1>
             <div class="row gx-4 gx-lg-5 align-items-center">
@@ -26,7 +26,7 @@ class Article extends HTMLElement {
               ${precaution.split(",").map(function(precaution,index){
                 return `
                   <li>
-                    <p> ${precaution} </p>
+                    <p> ${precaution.charAt(0).toUpperCase() + precaution.slice(1)} </p>
                   </li>
                 `
               }).join("")}
