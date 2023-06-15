@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark py-3"  style="background-color: #0B8FAC;">
+<nav class="navbar navbar-expand-lg navbar-dark py-3"  style="background-color: #146C94;">
   <div class="container">
       <a class="navbar-brand" href="#">
           <img src="{{url_for('static',filename='img/faviconfourhealth.png')}}" alt="" width="30" class="d-inline-block align-text-top me-2">
@@ -13,10 +13,10 @@
           <a class="nav-link {{'active' if index else ''}}" aria-current="page" href="/">Beranda</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link {{'active' if _input else ''}}" href="#">Cek Penyakit</a>
+          <a class="nav-link {{'active' if _input else ''}}" href="{{url_for('check')}} ">Cek Penyakit</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link {{'active' if _input else ''}}" href="#">About-Us</a>
+          <a class="nav-link {{'active' if about else ''}}" href="{{url_for('about')}} ">About-Us</a>
         </li>
       </ul>
      
