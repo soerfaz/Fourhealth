@@ -1,10 +1,8 @@
-class DescBar extends HTMLElement {
-    connectedCallback() {
-      this.render();
-    }
-    render() {
-      this.innerHTML = `
-      <div class="px-4 py-5 my-5 text-center">
+{% extends "base.html" %}
+{% block title %} About {% endblock title %}
+{% block content %}
+
+          <div class="px-4 py-5 my-5 text-center">
       <img
         class="d-block mx-auto mb-4"
         src="./static/img/faviconfourhealth.png"
@@ -21,7 +19,5 @@ class DescBar extends HTMLElement {
         </p>
       </div>
     </div>
-      `;
-    }
-  }
-  customElements.define("desc-bar", DescBar);
+    {% include "components/teams.html" %}
+{% endblock content %}

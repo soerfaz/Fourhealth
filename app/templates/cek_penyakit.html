@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}  Check {% endblock title %}
+{% block content %}
+    <div class="py-3 text-center mt-5">
+        <img class="d-block mx-auto mb-4" src="{{url_for('static', filename='img/faviconfourhealth.png')}}" alt=""
+          width="100" height="100">
+        <h2>Check your health</h2>
+    </div>
+    <div class="container" id="content">
+      <article id="how-to-fill" class="card">
+        <div class="card-body">        
+          <h3 class="text-center">How to Fill in Symptoms</h3>
+          <ul class="list-group">
+            <li class="list-group-item">1. Open the symptom input page.</li>
+            <li class="list-group-item">2. On the form, you will see an input box labeled "Enter Symptoms".</li>
+            <li class="list-group-item">3. Click on the input box to open the list of disease symptoms.</li>
+            <li class="list-group-item">4. You can select one or more disease symptoms by:
+              <ul>
+                <li>Clicking on the symptom you want to select.</li>
+                <li>If you want to select more than one symptom, repeat the same process and the symptoms will be automatically added.</li>
+                <li>The selected symptoms will be displayed in the input box.</li>
+              </ul>
+            </li>
+            <li class="list-group-item">5. If you want to change or remove the selected symptoms, you can reopen the input box and click or click again on the symptom you want to modify or remove.</li>
+            <li class="list-group-item">6. After filling in the form or any other page, click the "Check" button or to submit the data you have entered.</li>
+          </ul>
+          <h6 class="text-justify mt-2 text-danger">*Make sure to follow the instructions provided on the actual disease symptom input page.</h6>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <div id="alertMessage" class="alert alert-danger alert-dismissible fade show" style="display: none;">
+            Please enter a non-empty string.
+            <button type="button" class="btn-close close"  aria-label="Close"></button>
+          </div>
+            <h3 class="text-center">Enter the symptomps and find out the deasiase</h3>
+        <div>
+          <div class="form col-lg-12" action="" id="form" method="post">
+            <div class="form-group form-title">
+              <div class="mb-3">
+                <label class="form-label" for="form-label">body temperature</label>
+                <input id="fever" value="35" type="number" min="25" max="50" step="1" name="temperature" class="form-control">
+              </div>
+              <div class="mb-3">              
+                <label for="symptomps" class="form-label">Your symptomps</label>
+                <select class="form-select form-control" multiple="multiple" id="symptomps"  name="symptomps" required>
+                </select>
+              </div>
+            </div>
+
+          <button type="button" id="check" class="btn-submit w-100  mx-3">Check</button>
+        </div>
+      </div>
+      
+    </div>
+    
+    </article>
+    <div id="result"></div>
+      <script>
+        $('#symptomps').select2({
+          theme: "classic",
+          data: {{symptoms|safe}},
+          placeholder: "Enter the symptomps you may have",
+
+        })
+      </script>
+    </div>
+{% endblock content %}
+
+
+
