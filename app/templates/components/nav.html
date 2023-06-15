@@ -13,10 +13,10 @@
           <a class="nav-link {{'active' if index else ''}}" aria-current="page" href="/">Beranda</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link {{'active' if _input else ''}}" href="{{url_for('check')}} ">Cek Penyakit</a>
+          <a class="nav-link {{'active' if _input else ''}}" href="{{url_for('controller.check')}} ">Cek Penyakit</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link {{'active' if about else ''}}" href="{{url_for('about')}} ">About-Us</a>
+          <a class="nav-link {{'active' if about else ''}}" href="{{url_for('controller.about')}} ">About-Us</a>
         </li>
       </ul>
      
