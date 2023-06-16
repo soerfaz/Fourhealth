@@ -13,6 +13,6 @@ def create_app():
 
     from .controller import controller
 
-    app.register_blueprint(controller)
+    app.register_blueprint(controller,url_prefix="/")
 
     return app
