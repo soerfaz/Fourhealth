@@ -49,9 +49,10 @@ symptoms_dict = {
     "cramps": "Cramps"
 }
 
-symptomps_score = pd.read_csv("csv/Symptom-severity.csv")
-symptomps_precaution = pd.read_csv("csv/symptom_precaution.csv")
-symptomps_description = pd.read_csv("csv/symptom_Description.csv")
+symptomps_score = pd.read_csv("/home/fourhealth/Fourhealth/csv/Symptom-severity.csv")
+symptomps_precaution = pd.read_csv("/home/fourhealth/Fourhealth/csv/symptom_precaution.csv")
+symptomps_description = pd.read_csv("/home/fourhealth/Fourhealth/csv/symptom_Description.csv")
+print("hello world")
 
 @controller.route("/")
 def index():
@@ -92,11 +93,11 @@ def check():
         for symptoms in symptoms_arr:
             check_dict[symptoms] += 1
             score_arr.append(_symptomps_score[symptoms])
-        
+
         with open("model/ml.pickle","rb") as pickled:
             ml = load(pickled)
 
-        _input = [list(check_dict.values()) + [0 for i in range(0,90)]] 
+        _input = [list(check_dict.values()) + [0 for i in range(0,90)]]
         _result = ml.predict(_input)[0]
         precaution = [x for x in _symptomps_precaution[_result] if not None ]
         description = _symptomps_description[_result]
