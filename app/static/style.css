@@ -120,12 +120,12 @@ body {
 /*** Team ***/
 .team-item {
     position: relative;
-    padding: 4rem 0;
+    padding: 1rem 0;
 }
 
 .team-item img {
     position: relative;
-    height: 300px;
+    height: 250px;
     z-index: 2;
 }
 

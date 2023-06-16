@@ -16,12 +16,12 @@ class Article extends HTMLElement {
     this.innerHTML = `
     <section class="card shadow result">
           <div class="card-body">
-            <h1 class="mb-4">According by what you input, you got : </h1>
+            <h3 class="mb-5 text-center">Depending on what symptoms you entered, you obtained:</h3>
             <div class="row gx-4 gx-lg-5 align-items-center">
-              <h1 class="display-5 fw-bolder">${_name}</h1>
+              <h4 class="fw-bolder">${_name}</h4>
               <p class="lead">${description}</p>
             </div>
-            <h2 class="fw-bolder mb-4">Precaution</h2>
+            <h5 class="fw-bolder mb-3">Precaution</h5>
             <ul>
               ${precaution.split(",").map(function(precaution,index){
                 return `
